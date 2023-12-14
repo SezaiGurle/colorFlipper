@@ -6,13 +6,13 @@ $(document).ready(function() {
     btn.on("click", function() {
       let hexColor = "#";
       for (let i = 0; i < 6; i++) {
-        hexColor += hex[getRandomNumber()];
+        hexColor += hex[getRandomColor()];
       }
       color.text(hexColor);
       $("body").css("background-color", hexColor);
     });
   
-    function getRandomNumber() {
+    function getRandomColor() {
       return Math.floor(Math.random() * hex.length);
     }
   });
