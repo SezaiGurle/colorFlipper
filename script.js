@@ -4,12 +4,12 @@ $( document ).ready(function() {
     const color = $(".color");
 
     btn.on("click",function(){
-        const randomNumber = getRandomNumber();
-        $("body").css("background-color", colors[randomNumber]);
-        color.text(colors[randomNumber]);
+        const randomColor = getRandomColor();
+        $("body").css("background-color", colors[randomColor]);
+        color.text(colors[randomColor]);
       });
 
-      function getRandomNumber() {
+      function getRandomColor() {
         return Math.floor(Math.random() * colors.length);
       }
 });
